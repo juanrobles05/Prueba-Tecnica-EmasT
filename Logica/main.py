@@ -43,14 +43,15 @@ def missingNumber(items: list):
     result = 0
     auxiliar = []
     i = 0
-    for item in items:
-        auxiliar.append(item)
-        if item not in auxiliar:
-            result = item
+    for item in range(len(items)):
+        auxiliar.append(i)
         i += 1
 
-    return result
+    for x in auxiliar:
+        if x not in items:
+            result = x
 
+    return result
 
 def main():
     input = [1,1,2,2,3,3,4,4,5,5,6,6,7,8,8,9,9]
@@ -65,7 +66,6 @@ def main():
     print(result)
     print(result2)
     print(result3)
-
 
 if __name__ == "__main__":
     main()
